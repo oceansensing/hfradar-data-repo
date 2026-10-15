@@ -1,6 +1,6 @@
 # hfradar-data-repo
 
-The **MARACOOS HF radar network**'s surface currents and waves: a data repository of the oceansensing ocean map system, with its own
+The **MARACOOS HF radar network**'s surface currents, waves and stations: a data repository of the oceansensing ocean map system, with its own
 Pages site, its own schedule and its own gigabyte, and no code of its own.
 
 **Nothing is published yet.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
@@ -8,14 +8,14 @@ got wrong and the shared doc doctrine.
 
 ## What it publishes
 
-The MARACOOS HF radar network's real-time products, from Rutgers University's ERDDAP: **surface currents** (`cur-hfr-maracoos.json`) — the optimally interpolated total vectors, hourly at 6 km over the whole network, Cape Cod to Cape Hatteras (`regional: true`), each frame's header linking the same hour's 2 km grid (the New Jersey shelf) and 1 km grid (the bays and the harbor mouths) as its `details`; a vector published only where the data's own QARTOD primary flag passed it; whole centimeters a second (`unitScale` 0.01); **the past 24 hours** as frames, the base the newest hour with its vectors in, listing them (`frames`), every other `<stem>.v<time>.json` with regions of its own hour — and **waves** (`hfr-waves.json`): each wave site's significant height, mean period and the direction the waves come from, every 30 minutes over the 24 hours before the newest reading, a reading kept only when the radar does not flag it. Two products, R2's alone.
+The MARACOOS HF radar network's real-time products, from Rutgers University's ERDDAP: **surface currents** (`cur-hfr-maracoos.json`) — the optimally interpolated total vectors, hourly at 6 km over the whole network, Cape Cod to Cape Hatteras (`regional: true`), each frame's header linking the same hour's 2 km grid (the New Jersey shelf) and 1 km grid (the bays and the harbor mouths) as its `details`; a vector published only where the data's own QARTOD primary flag passed it; whole centimeters a second (`unitScale` 0.01); **the past 24 hours** as frames, the base the newest hour with its vectors in, listing them (`frames`), every other `<stem>.v<time>.json` with regions of its own hour — and **waves** (`hfr-waves.json`): each wave site's significant height, mean period and the direction the waves come from, every 30 minutes over the 24 hours before the newest reading, a reading kept only when the radar does not flag it — and **the stations** (`hfr-sites.json`): each radar station the three totals datasets name in their own `instrument` attribute, its antenna's place and the time of its newest radial file, from the U.S. IOOS High Frequency Radar Network's radial ERDDAP (a station it lists no radials for left out). Three products, R2's alone.
 
 These products are published **operationally but not drawn on the website's map**; the map's status
 line still reports them when they fall behind, which is how their health stays visible.
 
 ## Where the data comes from
 
-Rutgers University's ERDDAP (hfr.marine.rutgers.edu/erddap), the Mid-Atlantic Regional Association Coastal Ocean Observing System's (MARACOOS) CODAR SeaSonde network. **Its terms were read before a line was written** (2026-10-15): every dataset read carries one license — the data may be used and redistributed for free, and is not intended for legal use, with no warranty from the contributor, ERD, NOAA or the US government — and asks the acknowledgement that the data is provided by MARACOOS with funding from the US Integrated Ocean Observing System (IOOS). The datasets: `realtime_maracoos_6km_totals_qartod`, `_2km_` and `_1km_`, and every `realtime_waves_*` site reporting in ten days.
+Rutgers University's ERDDAP (hfr.marine.rutgers.edu/erddap), the Mid-Atlantic Regional Association Coastal Ocean Observing System's (MARACOOS) CODAR SeaSonde network. **Its terms were read before a line was written** (2026-10-15): every dataset read carries one license — the data may be used and redistributed for free, and is not intended for legal use, with no warranty from the contributor, ERD, NOAA or the US government — and asks the acknowledgement that the data is provided by MARACOOS with funding from the US Integrated Ocean Observing System (IOOS). The datasets: `realtime_maracoos_6km_totals_qartod`, `_2km_` and `_1km_`, and every `realtime_waves_*` site reporting in ten days. **The stations' status and places are the U.S. IOOS High Frequency Radar Network's** (hfradar.ioos.us/radials-erddap/erddap, 2026-10-15): public domain, used for any lawful purpose with its credit line — "Data provided by the U.S. Integrated Ocean Observing System (IOOS) High Frequency Radar Network (HFRNet)" — and every radial dataset carrying the same free-use, not-for-legal-use license; one catalog request a run, and one per station for its antenna's place where the last publish has none.
 
 ## How it runs
 

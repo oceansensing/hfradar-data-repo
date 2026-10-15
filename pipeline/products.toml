@@ -2,7 +2,9 @@
 # Cape Cod to Cape Hatteras, from Rutgers University's ERDDAP (hfr.marine.rutgers.edu/erddap) —
 # the currents hourly at 6 km, the same hour's 2 km (the New Jersey shelf) and 1 km (the bays and
 # the harbor mouths) grids linked inside each frame, the past 24 hours as frames; and each wave
-# site's height, period and direction over the past 24 hours. The fetcher is the site's
+# site's height, period and direction over the past 24 hours; and each radar station's antenna and its
+# newest radial file, from the U.S. IOOS High Frequency Radar Network's radial ERDDAP
+# (hfradar.ioos.us/radials-erddap). The fetcher is the site's
 # `scripts/fetch-hfradar.py`, whose docstring carries the measurements.
 #
 # **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every file of
@@ -28,6 +30,10 @@ lane = "hfr.marine.rutgers.edu"
 cmd = ["python3", "scripts/fetch-hfradar.py", "--only=hfr-waves"]
 lane = "hfr.marine.rutgers.edu"
 
+[steps.hfr-sites]
+cmd = ["python3", "scripts/fetch-hfradar.py", "--only=hfr-sites"]
+lane = "hfradar.ioos.us"
+
 [products.hfr-currents]
 title = "Surface currents, the MARACOOS HF radar network, hourly at 6, 2 and 1 km, the past 24 hours (Rutgers University)"
 step = "hfr-currents"
@@ -43,5 +49,14 @@ step = "hfr-waves"
 roots = ["hfr-waves.json"]
 writes = ["hfr-waves.json"]
 namespace = ["python3", "scripts/fetch-hfradar.py", "--namespace", "--only=hfr-waves"]
+max_age_hours = 6
+r2_only = true
+
+[products.hfr-sites]
+title = "The MARACOOS HF radar network's stations: each antenna's place and its newest radial file (U.S. IOOS HFRNet)"
+step = "hfr-sites"
+roots = ["hfr-sites.json"]
+writes = ["hfr-sites.json"]
+namespace = ["python3", "scripts/fetch-hfradar.py", "--namespace", "--only=hfr-sites"]
 max_age_hours = 6
 r2_only = true
