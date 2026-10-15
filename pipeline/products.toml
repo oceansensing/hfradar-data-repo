@@ -1,0 +1,47 @@
+# What this repository publishes: the MARACOOS HF radar network's surface currents and waves,
+# Cape Cod to Cape Hatteras, from Rutgers University's ERDDAP (hfr.marine.rutgers.edu/erddap) —
+# the currents hourly at 6 km, the same hour's 2 km (the New Jersey shelf) and 1 km (the bays and
+# the harbor mouths) grids linked inside each frame, the past 24 hours as frames; and each wave
+# site's height, period and direction over the past 24 hours. The fetcher is the site's
+# `scripts/fetch-hfradar.py`, whose docstring carries the measurements.
+#
+# **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every file of
+# these products is published to Cloudflare R2 and not to Pages, which carries the status alone. The roots stay on the `published` branch, where
+# the next run seeds from them — the frames older than the newest four carried forward from there.
+#
+# **The budgets are the server's lateness plus a missed run.** Measured 2026-10-15: the newest hour
+# with its vectors in stood 2.5 to 3.5 hours behind the clock, the wave sites 2.5; six hours allows
+# the hourly run a miss and an hour's more lateness before the status calls it late.
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+[steps.hfr-currents]
+cmd = ["python3", "scripts/fetch-hfradar.py", "--only=hfr-currents"]
+lane = "hfr.marine.rutgers.edu"
+
+[steps.hfr-waves]
+cmd = ["python3", "scripts/fetch-hfradar.py", "--only=hfr-waves"]
+lane = "hfr.marine.rutgers.edu"
+
+[products.hfr-currents]
+title = "Surface currents, the MARACOOS HF radar network, hourly at 6, 2 and 1 km, the past 24 hours (Rutgers University)"
+step = "hfr-currents"
+roots = ["cur-hfr-maracoos.json"]
+writes = ["cur-hfr-maracoos.json", "cur-hfr-maracoos.v*.json", "cur-hfr-maracoos-2km.json", "cur-hfr-maracoos-2km.v*.json", "cur-hfr-maracoos-1km.json", "cur-hfr-maracoos-1km.v*.json"]
+namespace = ["python3", "scripts/fetch-hfradar.py", "--namespace", "--only=hfr-currents"]
+max_age_hours = 6
+r2_only = true
+
+[products.hfr-waves]
+title = "Waves at the MARACOOS HF radar network's sites, the past 24 hours (Rutgers University)"
+step = "hfr-waves"
+roots = ["hfr-waves.json"]
+writes = ["hfr-waves.json"]
+namespace = ["python3", "scripts/fetch-hfradar.py", "--namespace", "--only=hfr-waves"]
+max_age_hours = 6
+r2_only = true
