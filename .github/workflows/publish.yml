@@ -20,7 +20,12 @@ on:
         description: 'Rebuild even if the probe says the tree is current'
         type: boolean
         default: false
-  # No schedule: nothing to publish until its upstream is live.
+  # Hourly at 23 past (2026-10-15, after the first dispatched run published a
+  # tree): the server's newest hour stands 2.5 to 3.5 hours behind the clock,
+  # each run builds the newest four again as they fill, and six hours of
+  # budget allow a missed run and an hour's more lateness.
+  schedule:
+    - cron: '23 * * * *'
 
 permissions: {}
 
