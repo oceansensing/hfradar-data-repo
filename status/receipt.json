@@ -1,0 +1,17 @@
+{
+ "schema": 1,
+ "generated": "2026-10-18T01:07:35Z",
+ "mode": "full",
+ "fates": {
+  "hfr-currents": "fresh",
+  "hfr-waves": "fresh",
+  "hfr-sites": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [],
+ "tile_keys": {}
+}
