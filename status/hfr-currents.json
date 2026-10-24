@@ -1,0 +1,234 @@
+{
+ "schema": 1,
+ "product": "hfr-currents",
+ "title": "Surface currents, the MARACOOS HF radar network, hourly at 6, 2 and 1 km, the past 24 hours (Rutgers University)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T16:33:27Z",
+ "updated": "2026-10-24T16:33:27Z",
+ "hour": "2026-10-24T14:00:00Z",
+ "modelRun": null,
+ "source": "MARACOOS HF radar network, Rutgers University",
+ "hours": [
+  "2026-10-24T14:00:00Z"
+ ],
+ "files": {
+  "cur-hfr-maracoos-1km.json": {
+   "bytes": 2796277
+  },
+  "cur-hfr-maracoos-1km.v20261023T1500Z.json": {
+   "bytes": 2795857
+  },
+  "cur-hfr-maracoos-1km.v20261023T1600Z.json": {
+   "bytes": 2796107
+  },
+  "cur-hfr-maracoos-1km.v20261023T1700Z.json": {
+   "bytes": 2796490
+  },
+  "cur-hfr-maracoos-1km.v20261023T1800Z.json": {
+   "bytes": 2796755
+  },
+  "cur-hfr-maracoos-1km.v20261023T1900Z.json": {
+   "bytes": 2796298
+  },
+  "cur-hfr-maracoos-1km.v20261023T2000Z.json": {
+   "bytes": 2796190
+  },
+  "cur-hfr-maracoos-1km.v20261023T2100Z.json": {
+   "bytes": 2796544
+  },
+  "cur-hfr-maracoos-1km.v20261023T2200Z.json": {
+   "bytes": 2796033
+  },
+  "cur-hfr-maracoos-1km.v20261023T2300Z.json": {
+   "bytes": 2796712
+  },
+  "cur-hfr-maracoos-1km.v20261024T0000Z.json": {
+   "bytes": 2796635
+  },
+  "cur-hfr-maracoos-1km.v20261024T0100Z.json": {
+   "bytes": 2796131
+  },
+  "cur-hfr-maracoos-1km.v20261024T0200Z.json": {
+   "bytes": 2796072
+  },
+  "cur-hfr-maracoos-1km.v20261024T0300Z.json": {
+   "bytes": 2795561
+  },
+  "cur-hfr-maracoos-1km.v20261024T0400Z.json": {
+   "bytes": 2796318
+  },
+  "cur-hfr-maracoos-1km.v20261024T0500Z.json": {
+   "bytes": 2796281
+  },
+  "cur-hfr-maracoos-1km.v20261024T0600Z.json": {
+   "bytes": 2796514
+  },
+  "cur-hfr-maracoos-1km.v20261024T0700Z.json": {
+   "bytes": 2795871
+  },
+  "cur-hfr-maracoos-1km.v20261024T0800Z.json": {
+   "bytes": 2796219
+  },
+  "cur-hfr-maracoos-1km.v20261024T0900Z.json": {
+   "bytes": 2795665
+  },
+  "cur-hfr-maracoos-1km.v20261024T1000Z.json": {
+   "bytes": 2795428
+  },
+  "cur-hfr-maracoos-1km.v20261024T1100Z.json": {
+   "bytes": 2795791
+  },
+  "cur-hfr-maracoos-1km.v20261024T1200Z.json": {
+   "bytes": 2795651
+  },
+  "cur-hfr-maracoos-1km.v20261024T1300Z.json": {
+   "bytes": 2795598
+  },
+  "cur-hfr-maracoos-2km.json": {
+   "bytes": 110714
+  },
+  "cur-hfr-maracoos-2km.v20261023T1500Z.json": {
+   "bytes": 112695
+  },
+  "cur-hfr-maracoos-2km.v20261023T1600Z.json": {
+   "bytes": 113245
+  },
+  "cur-hfr-maracoos-2km.v20261023T1700Z.json": {
+   "bytes": 113682
+  },
+  "cur-hfr-maracoos-2km.v20261023T1800Z.json": {
+   "bytes": 114547
+  },
+  "cur-hfr-maracoos-2km.v20261023T1900Z.json": {
+   "bytes": 113149
+  },
+  "cur-hfr-maracoos-2km.v20261023T2000Z.json": {
+   "bytes": 113205
+  },
+  "cur-hfr-maracoos-2km.v20261023T2100Z.json": {
+   "bytes": 113197
+  },
+  "cur-hfr-maracoos-2km.v20261023T2200Z.json": {
+   "bytes": 112595
+  },
+  "cur-hfr-maracoos-2km.v20261023T2300Z.json": {
+   "bytes": 112079
+  },
+  "cur-hfr-maracoos-2km.v20261024T0000Z.json": {
+   "bytes": 111681
+  },
+  "cur-hfr-maracoos-2km.v20261024T0100Z.json": {
+   "bytes": 111160
+  },
+  "cur-hfr-maracoos-2km.v20261024T0200Z.json": {
+   "bytes": 111434
+  },
+  "cur-hfr-maracoos-2km.v20261024T0300Z.json": {
+   "bytes": 111951
+  },
+  "cur-hfr-maracoos-2km.v20261024T0400Z.json": {
+   "bytes": 112099
+  },
+  "cur-hfr-maracoos-2km.v20261024T0500Z.json": {
+   "bytes": 112631
+  },
+  "cur-hfr-maracoos-2km.v20261024T0600Z.json": {
+   "bytes": 112729
+  },
+  "cur-hfr-maracoos-2km.v20261024T0700Z.json": {
+   "bytes": 112164
+  },
+  "cur-hfr-maracoos-2km.v20261024T0800Z.json": {
+   "bytes": 111987
+  },
+  "cur-hfr-maracoos-2km.v20261024T0900Z.json": {
+   "bytes": 111753
+  },
+  "cur-hfr-maracoos-2km.v20261024T1000Z.json": {
+   "bytes": 111431
+  },
+  "cur-hfr-maracoos-2km.v20261024T1100Z.json": {
+   "bytes": 111283
+  },
+  "cur-hfr-maracoos-2km.v20261024T1200Z.json": {
+   "bytes": 111964
+  },
+  "cur-hfr-maracoos-2km.v20261024T1300Z.json": {
+   "bytes": 110999
+  },
+  "cur-hfr-maracoos.json": {
+   "bytes": 367372,
+   "sha256": "89fba982df56a202d6894956510739a9ac0a0868aefdd8877a126dff67e9bb14"
+  },
+  "cur-hfr-maracoos.v20261023T1500Z.json": {
+   "bytes": 355793
+  },
+  "cur-hfr-maracoos.v20261023T1600Z.json": {
+   "bytes": 356540
+  },
+  "cur-hfr-maracoos.v20261023T1700Z.json": {
+   "bytes": 354811
+  },
+  "cur-hfr-maracoos.v20261023T1800Z.json": {
+   "bytes": 356650
+  },
+  "cur-hfr-maracoos.v20261023T1900Z.json": {
+   "bytes": 356197
+  },
+  "cur-hfr-maracoos.v20261023T2000Z.json": {
+   "bytes": 355577
+  },
+  "cur-hfr-maracoos.v20261023T2100Z.json": {
+   "bytes": 355291
+  },
+  "cur-hfr-maracoos.v20261023T2200Z.json": {
+   "bytes": 354707
+  },
+  "cur-hfr-maracoos.v20261023T2300Z.json": {
+   "bytes": 355669
+  },
+  "cur-hfr-maracoos.v20261024T0000Z.json": {
+   "bytes": 356614
+  },
+  "cur-hfr-maracoos.v20261024T0100Z.json": {
+   "bytes": 357918
+  },
+  "cur-hfr-maracoos.v20261024T0200Z.json": {
+   "bytes": 359041
+  },
+  "cur-hfr-maracoos.v20261024T0300Z.json": {
+   "bytes": 359587
+  },
+  "cur-hfr-maracoos.v20261024T0400Z.json": {
+   "bytes": 360367
+  },
+  "cur-hfr-maracoos.v20261024T0500Z.json": {
+   "bytes": 360741
+  },
+  "cur-hfr-maracoos.v20261024T0600Z.json": {
+   "bytes": 360476
+  },
+  "cur-hfr-maracoos.v20261024T0700Z.json": {
+   "bytes": 359176
+  },
+  "cur-hfr-maracoos.v20261024T0800Z.json": {
+   "bytes": 357841
+  },
+  "cur-hfr-maracoos.v20261024T0900Z.json": {
+   "bytes": 356860
+  },
+  "cur-hfr-maracoos.v20261024T1000Z.json": {
+   "bytes": 356426
+  },
+  "cur-hfr-maracoos.v20261024T1100Z.json": {
+   "bytes": 356408
+  },
+  "cur-hfr-maracoos.v20261024T1200Z.json": {
+   "bytes": 356778
+  },
+  "cur-hfr-maracoos.v20261024T1300Z.json": {
+   "bytes": 357332
+  }
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-10-24T16:33:27Z",
+ "mode": "full",
+ "run": {
+  "id": "40112044896",
+  "url": "https://github.com/oceansensing/hfradar-data-repo/actions/runs/40112044896"
+ },
+ "schedule": {
+  "crons": [
+   "23 * * * *"
+  ],
+  "longestGapHours": 1.0
+ },
+ "products": {
+  "hfr-currents": {
+   "title": "Surface currents, the MARACOOS HF radar network, hourly at 6, 2 and 1 km, the past 24 hours (Rutgers University)",
+   "roots": [
+    "cur-hfr-maracoos.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-24T16:33:27Z",
+   "updated": "2026-10-24T16:33:27Z",
+   "hour": "2026-10-24T14:00:00Z",
+   "modelRun": null,
+   "source": "MARACOOS HF radar network, Rutgers University",
+   "hours": [
+    "2026-10-24T14:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 2.56,
+   "nearestOffsetHours": 2.56
+  },
+  "hfr-waves": {
+   "title": "Waves at the MARACOOS HF radar network's sites, the past 24 hours (Rutgers University)",
+   "roots": [
+    "hfr-waves.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-24T16:33:27Z",
+   "updated": "2026-10-24T16:33:27Z",
+   "hour": "2026-10-24T14:00:00Z",
+   "modelRun": null,
+   "source": null,
+   "hours": [
+    "2026-10-24T14:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 2.56,
+   "nearestOffsetHours": 2.56,
+   "health": {
+    "hfr-waves": {
+     "root": "hfr-waves.json",
+     "servers": [
+      {
+       "name": "MARACOOS HF radar network, Rutgers University",
+       "state": "ok",
+       "asked": 13,
+       "unanswered": 0,
+       "kept": 0,
+       "failedRuns": 0
+      }
+     ]
+    }
+   }
+  },
+  "hfr-sites": {
+   "title": "The MARACOOS HF radar network's stations: each antenna's place and its newest radial file (U.S. IOOS HFRNet)",
+   "roots": [
+    "hfr-sites.json"
+   ],
+   "fate": "held",
+   "reason": "step hfr-sites exit 1",
+   "checked": "2026-10-23T18:40:16Z",
+   "updated": "2026-10-23T18:40:16Z",
+   "hour": "2026-10-23T18:40:12Z",
+   "modelRun": null,
+   "source": null,
+   "hours": [
+    "2026-10-23T18:40:12Z"
+   ],
+   "stale": true,
+   "staleCause": "ours",
+   "ageHours": 21.89,
+   "nearestOffsetHours": 21.89,
+   "health": {
+    "hfr-sites": {
+     "root": "hfr-sites.json",
+     "servers": [
+      {
+       "name": "U.S. Integrated Ocean Observing System (IOOS) High Frequency Radar Network (HFRNet)",
+       "state": "ok",
+       "asked": 40,
+       "unanswered": 2,
+       "failedRuns": 0
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "generated": "2026-10-24T16:33:27Z",
+ "mode": "full",
+ "fates": {
+  "hfr-currents": "fresh",
+  "hfr-waves": "fresh",
+  "hfr-sites": "held"
+ },
+ "reasons": {
+  "hfr-sites": "step hfr-sites exit 1"
+ },
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [
+  "hfr-sites (21.9 h, held)"
+ ],
+ "tile_keys": {}
+}
