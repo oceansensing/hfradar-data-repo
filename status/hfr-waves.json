@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "product": "hfr-waves",
+ "title": "Waves at the MARACOOS HF radar network's sites, the past 24 hours (Rutgers University)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-31T19:28:20Z",
+ "updated": "2026-10-31T19:28:20Z",
+ "hour": "2026-10-31T17:00:00Z",
+ "modelRun": null,
+ "source": null,
+ "hours": [
+  "2026-10-31T17:00:00Z"
+ ],
+ "files": {
+  "hfr-waves.json": {
+   "bytes": 24406,
+   "sha256": "7c55954368fdf5d573d1883970cde40a0b61c4372767b05a8d5f4a0b59c3de75"
+  }
+ },
+ "health": {
+  "hfr-waves": {
+   "root": "hfr-waves.json",
+   "servers": [
+    {
+     "name": "MARACOOS HF radar network, Rutgers University",
+     "state": "ok",
+     "asked": 13,
+     "unanswered": 0,
+     "kept": 0,
+     "failedRuns": 0
+    }
+   ]
+  }
+ }
+}
