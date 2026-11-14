@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "product": "hfr-sites",
+ "title": "The MARACOOS HF radar network's stations: each antenna's place and its newest radial file (U.S. IOOS HFRNet)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-14T16:28:12Z",
+ "updated": "2026-11-14T16:28:12Z",
+ "hour": "2026-11-14T16:28:07Z",
+ "modelRun": null,
+ "source": null,
+ "hours": [
+  "2026-11-14T16:28:07Z"
+ ],
+ "files": {
+  "hfr-sites.json": {
+   "bytes": 4462,
+   "sha256": "cac2332d3eccfd5c9ad6bcebd70dd9a0f707d90bba4d14ec7b2abad0a3bf189a"
+  }
+ },
+ "health": {
+  "hfr-sites": {
+   "root": "hfr-sites.json",
+   "servers": [
+    {
+     "name": "U.S. Integrated Ocean Observing System (IOOS) High Frequency Radar Network (HFRNet)",
+     "state": "ok",
+     "asked": 40,
+     "unanswered": 2,
+     "failedRuns": 0
+    }
+   ]
+  }
+ }
+}
