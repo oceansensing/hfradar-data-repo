@@ -156,7 +156,7 @@ fact from a guess that aged.
 - **The newest hour fills in late**: the server lists an hour before its vectors arrive, so the fetcher takes the newest hour holding a quarter of its neighbors' vectors and builds the newest four again each run.
 - **The frames older than the newest four are carried forward** from the `published` branch the stage is seeded from: a run with nothing seeded builds all 24, which is about 70 MB asked of the server instead of about 10.
 - **A tree of this origin's alone holds no global vector grid, by design**: the 6 km root declares itself regional, and the 2 km and 1 km grids it links are its own family (`test-schema.mjs`, 2026-10-15).
-- **The physical control is the tide**: the flow along the Chesapeake Bay mouth on the 1 km grid must turn at least twice over the frames that hold it; a run refused there is a frame written from the wrong hour, not a quiet bay.
+- **The physical control is the tide**: the flow along the Chesapeake Bay mouth on the 1 km grid, fitted together with a straight line, must carry a 12.42-hour wave of 0.05 m/s or more over the frames that hold it (0.17 to 0.38 measured, 2026-11-10 to 11-15); a run refused there holds frames that do not move with the tide — one hour written many times — not a quiet bay. Until 2026-11-15 the rule was two changes of direction, which the bay's own outflow can hide: that day the flow changed direction once in 24 hours with the tide plain in it.
 
 ### Rules inherited from the sibling data repositories
 
