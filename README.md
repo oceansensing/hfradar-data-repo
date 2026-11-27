@@ -1,44 +1,15 @@
 # hfradar-data-repo
 
-The **MARACOOS HF radar network**'s surface currents, waves and stations: a data repository of the oceansensing ocean map system, with its own
-Pages site, its own schedule and its own gigabyte, and no code of its own.
+The MARACOOS HF radar network's surface currents, waves and stations, as data
+for the oceansensing.org ocean map: hourly surface currents from Cape Cod to
+Cape Hatteras over the past 24 hours, with finer grids on the New Jersey shelf
+and in the bays and harbor mouths; each wave site's significant height, mean
+period and direction; and each radar station's place and its newest report.
 
-**Publishing since 2026-10-15, hourly.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
-got wrong and the shared doc doctrine.
+Updated hourly.
 
-## What it publishes
+## Sources and credits
 
-The MARACOOS HF radar network's real-time products, from Rutgers University's ERDDAP: **surface currents** (`cur-hfr-maracoos.json`) — the optimally interpolated total vectors, hourly at 6 km over the whole network, Cape Cod to Cape Hatteras (`regional: true`), each frame's header linking the same hour's 2 km grid (the New Jersey shelf) and 1 km grid (the bays and the harbor mouths) as its `details`; a vector published only where the data's own QARTOD primary flag passed it; whole centimeters a second (`unitScale` 0.01); **the past 24 hours** as frames, the base the newest hour with its vectors in, listing them (`frames`), every other `<stem>.v<time>.json` with regions of its own hour — and **waves** (`hfr-waves.json`): each wave site's significant height, mean period and the direction the waves come from, every 30 minutes over the 24 hours before the newest reading, a reading kept only when the radar does not flag it — and **the stations** (`hfr-sites.json`): each radar station the three totals datasets name in their own `instrument` attribute, its antenna's place and the time of its newest radial file, from the U.S. IOOS High Frequency Radar Network's radial ERDDAP (a station it lists no radials for left out). Three products, R2's alone.
+Rutgers University, the Mid-Atlantic Regional Association Coastal Ocean Observing System's (MARACOOS) CODAR SeaSonde network: every dataset read carries one license — the data may be used and redistributed for free, and is not intended for legal use, with no warranty from the contributor, ERD, NOAA or the US government — and asks the acknowledgement that the data is provided by MARACOOS with funding from the US Integrated Ocean Observing System (IOOS).
 
-These products are published **operationally but not drawn on the
-website's map**. R2 alone carries them, so this repository's Pages status names none of
-them: the map's status line and the site's watchdog see only whether the
-origin publishes. Their fates are in the status on R2 and on the
-`published` branch.
-
-## Where the data comes from
-
-Rutgers University's ERDDAP (hfr.marine.rutgers.edu/erddap), the Mid-Atlantic Regional Association Coastal Ocean Observing System's (MARACOOS) CODAR SeaSonde network. **Its terms were read before a line was written** (2026-10-15): every dataset read carries one license — the data may be used and redistributed for free, and is not intended for legal use, with no warranty from the contributor, ERD, NOAA or the US government — and asks the acknowledgement that the data is provided by MARACOOS with funding from the US Integrated Ocean Observing System (IOOS). The datasets: `realtime_maracoos_6km_totals_qartod`, `_2km_` and `_1km_`, and every `realtime_waves_*` site reporting in ten days. **The stations' status and places are the U.S. IOOS High Frequency Radar Network's** (hfradar.ioos.us/radials-erddap/erddap, 2026-10-15): public domain, used for any lawful purpose with its credit line — "Data provided by the U.S. Integrated Ocean Observing System (IOOS) High Frequency Radar Network (HFRNet)" — and every radial dataset carrying the same free-use, not-for-legal-use license; one catalog request a run, and one per station for its antenna's place where the last publish has none.
-
-## How it runs
-
-The orchestrator (the site's private `pipeline/`), the fetchers and the
-published-file contract all come from `oceansensing.github.io`, checked out at
-run time. This repository carries `pipeline/products.toml` and its publish
-workflow, and nothing else executable. Each run publishes to GitHub Pages and
-to Cloudflare R2 from one build. Related repositories: none it depends on.
-
-**Which document gets what, and what "update docs" means across every
-repository of this project, is the doctrine block at the top of `CLAUDE.md`**: the
-same text in each, held equal by the site's `check:docs`.
-
-## Structure
-
-```
-README.md       what this is
-CLAUDE.md       what must not be got wrong, and the shared doc doctrine
-PLAN.md         the founding plan and running record
-DECISIONS.md    dated one-way decisions, D1 onward
-pipeline/       products.toml, the declaration the orchestrator reads
-.github/        the publish workflow
-```
+**The stations' status and places are the U.S. IOOS High Frequency Radar Network's**: public domain, used for any lawful purpose with its credit line — "Data provided by the U.S. Integrated Ocean Observing System (IOOS) High Frequency Radar Network (HFRNet)" — and every radial dataset carrying the same free-use, not-for-legal-use license.
